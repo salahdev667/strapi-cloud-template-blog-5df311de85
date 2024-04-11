@@ -8,8 +8,8 @@ module.exports = {
             await strapi.plugins['email'].services.email.send({
               to: 'salaheddine.boulahya@gmail.com',
               from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
-              subject: event.result.id,
-              text: event.result.id
+              subject: event.result.siteName,
+              text: event.result.siteName
             })
         } catch(err) {
             console.log(err);
