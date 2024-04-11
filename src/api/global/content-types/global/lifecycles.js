@@ -10,7 +10,7 @@ module.exports = {
               to: emailAddresses,
               from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
               subject: 'test',
-              html: "<b>test</b>"
+              text: 'test'
             })
         } catch(err) {
             console.log(err);
