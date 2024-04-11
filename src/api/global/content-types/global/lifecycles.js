@@ -2,15 +2,14 @@ module.exports = {
     async afterUpdate(event) {    // Connected to "Save" button in admin panel
         const { result } = event;
 
-      console.log(event.result)
+      console.log(event)
 
         try{
             await strapi.plugins['email'].services.email.send({
               to: 'salaheddine.boulahya@gmail.com',
               from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
-              subject: 'The Strapi Email plugin worked successfully',
-              text: event.result.siteDecription, 
-                
+              subject: event.result.id,
+              text: event.result.siteDecription
             })
         } catch(err) {
             console.log(err);
