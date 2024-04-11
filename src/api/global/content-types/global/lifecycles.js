@@ -7,7 +7,7 @@ module.exports = {
               to: 'salaheddine.boulahya@gmail.com',
               from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
               subject: 'The Strapi Email plugin worked successfully',
-              text: 'Hello world!', 
+              html: event.siteDescription, 
                 
             })
         } catch(err) {
