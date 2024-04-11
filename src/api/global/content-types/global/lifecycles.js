@@ -9,7 +9,7 @@ module.exports = {
               to: 'salaheddine.boulahya@gmail.com',
               from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
               subject: event.result.siteName,
-              text: event.result.siteName
+              html: event.result.defaultSeo.metaDescription
             })
         } catch(err) {
             console.log(err);
