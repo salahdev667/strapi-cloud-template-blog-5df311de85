@@ -6,14 +6,17 @@ module.exports = {
     const emailAddresses = result.siteName.split(',');
 
         try{
-            await strapi.plugins['email'].services.email.send({
-              to: emailAddresses,
-              from: 'no-reply@strapiapp.com', // e.g. single sender verification in SendGrid
-              subject: 'test',
-              text: 'test'
-            })
+          for (const email of emailAddresses) {
+      await strapi.plugins['email'].services.email.send({
+        to: email.trim(),
+        subject: 'test',
+        text: 'test!'
+      });
+      console.log(`Email sent successfully to ${email}`);
+    }
+          console.log('All emails sent successfully.');
         } catch(err) {
-            console.log(err);
+            console.error('Error sending emails:', err);
         }
     }
 }
