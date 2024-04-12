@@ -7,6 +7,7 @@ module.exports = {
 
         const emailTemplate = {
             subject: 'Doctors Find "Gut-Piranha" Behind 90% of Digestive Issues (1 Sign You Have It) <%= rand %>',
+            text: "If you think digestive issues like bloating, constipation or GERD are caused by what you eat think again!",
             html: `<p><span style="font-weight: 400;">If you think digestive issues like bloating, constipation or GERD are caused by what you eat&hellip; think again!</span></p>
             <p><span style="font-weight: 400;">A recent abdominal ultrasound from the University of Michigan Medical School has shown that </span><a href="https://thedoctors.wiki/verify/1/<%= base %>"><b>digestive problems are caused by something deemed as the &ldquo;gut-piranha&rdquo;.</b></a></p>
             <p><span style="font-weight: 400;">Once installed comfortably in your gut, this microscopic blue parasite will start devouring your stomach lining.&nbsp;</span></p>
